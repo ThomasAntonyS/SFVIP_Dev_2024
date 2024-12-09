@@ -1,9 +1,9 @@
- public static void amountDist(list<Appointment__c> listApp){
+public class AmountDistributionHandler {
+
+    public static void amountDist(list<Appointment__c> listApp){
 
         list<Service_records__c> serList = new list <Service_records__c>();
-
         
-
         for(Appointment__c app : listApp){
 
             if(app.Maintenance_service__c == true && app.Repairs__c == true && app.Replacement_Parts__c == true){
@@ -46,12 +46,7 @@
 
                 app.Service_Amount__c = 5000;
 
-            }
-
-            
-
-    }
-
-    }
-
+            }        
+      }
+   }
 }
